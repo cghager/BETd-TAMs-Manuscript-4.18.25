@@ -1,12 +1,10 @@
-# Reproducible R Analysis Capsule
-This capsule includes the R code and environment used for the manuscript, The BET Degrader ZBC260 Inhibits Breast Cancer Progression by Reprograming Macrophages in the Tumor Microenvironment, submitted to Cancer Research.
+# Reproducible R Analysis 
+This includes the R code used for the manuscript, "The BET Degrader ZBC260 Inhibits Breast Cancer Progression by Reprograming Macrophages in the Tumor Microenvironment", submitted to Cancer Research.
 
 ## Data Files
 1.	Myeloid_cells_finals.rds – This file contains metadata generated from myeloid cell subclustering analysis. It was created after performing subclustering on the "myeloid cells" subset extracted from the total cells Seurat object ("obj"). The metadata includes detailed cluster information specific to myeloid cells and has been used for differential gene expression analysis within this subset. Additionally, this metadata will be utilized for transcription factor analysis focused on myeloid cell populations. While this metadata is suitable for studying cell-to-cell interactions within the myeloid subset, analyses involving interactions between myeloid cells and other cell types should use the total cells Seurat object, which includes all major cell identities such as tumor cells.
 
-2.	Myeloid_cells_processed.rds – Description (Not needed)-please delete this metadata file.
-
-## Scripts (Should be arranged sequence wise like total cells, myeloid subcluster) differential cells chat and TF (please check figure order)
+## Scripts: Should be arranged sequence wise - i.e. total cells, myeloid subcluster, differential cells chat, and TF (please check figure order)
 1.	Cell_chat_analysis.R - This script analyzes interactions between myeloid cells and tumor cells. To perform this analysis accurately, both myeloid and tumor cells are first subsetted from the total cells Seurat object ("obj").
 2.	Differential gene expression.R - This script performs differential gene expression analysis specifically on myeloid cells. It uses the myeloid cell metadata typically derived from the myeloid cell subset of the total cells Seurat object. The goal is to identify genes that are differentially expressed between distinct myeloid cell clusters or conditions, providing insights into functional differences within the myeloid population.
 3.	Myeloid_cell_subcluster.R - This script performs subclustering of myeloid cells extracted from the total cells Seurat object “obj”. It refines the clustering of the myeloid cell subset to identify finer subpopulations within the major myeloid cell group. The output includes updated cluster assignments and metadata, which can be used for downstream analyses such as differential gene expression, transcription factor analysis, and cell-cell interaction studies focused on myeloid cells.
@@ -71,6 +69,3 @@ dose – Disease ontology and semantic similarity analysis for enrichment tools.
 Developer Tools
 BiocManager – Installs and manages Bioconductor packages.
 devtools – Streamlines R package development and GitHub installation.
-
-## Notes
-Please add any notes that may be needed. If nothing can be deleted. 
