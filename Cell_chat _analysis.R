@@ -231,11 +231,3 @@ ggplot(df_ligands, aes(x = Sender, y = Receiver, size = Interaction, color = Int
   theme_minimal()
 
 chordDiagram(df_chord, transparency = 0.5, col = colorRamp2(c(0, max(df_chord$Interaction)), c("blue", "red")))
-
-
-
-
-
-
-
-
